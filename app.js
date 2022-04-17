@@ -3,7 +3,16 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 /* Setting the Page to Generate from */
 const generatePage = require('./src/inner_app');
-const generatePagecont = require('./src/array_organization')
+const pageHTML = generatePage();
+
+const generateSystem = () => {
+    fs.writeFile('./Team.html', pageHTML, err => {
+        if (err) throw new Error(err);
+        
+        });
+}
+
+
 
 console.log("You will be asked a series of questions to generate a profile for your team");
 const prompting = () => {
@@ -11,6 +20,7 @@ const prompting = () => {
 
 /* Creating Prompts */
 const promptUser = () => {
+    
   return inquirer.prompt([
     {
       type: 'input',
@@ -77,8 +87,23 @@ promptUser()
         .then(specData => {
             portfolioData.spec = specData.spec;
                     /* Genrating HTML File */
-            const pageHTML = generatePage(portfolioData);
-            fs.appendFile('./Team.html', pageHTML, err => {
+            
+            
+        fs.appendFileSync('./Team.html', `
+        
+<div class="card" style="width: 12rem; height: 12rem; margin: 10px">
+<div class="card-body">
+    <h5 class="card-title">${portfolioData.status}</h5>
+    <div class="card-text">
+    <div class="name" id="i-temp2">${portfolioData.name}</div>
+        <div class="email">${portfolioData.email}</div>
+        <div class="offn" id="i-feel2">${portfolioData.spec}</div>
+
+    </div>
+</div>
+</div>
+             `
+        , err => {
             if (err) throw new Error(err);
             
             });
@@ -110,4 +135,5 @@ promptUser()
     
   });
 }
+generateSystem();
 prompting();
