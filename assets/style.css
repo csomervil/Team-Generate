@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+    padding: 0;
+    align-items: center;
+  }
+
+html {
+  margin: 0;
+    padding: 0;
+  }
+main {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.row-days {
+  background-color: blue;
+}

@@ -11,10 +11,14 @@ module.exports = templateData => {
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link href="./assets/style.css" rel="stylesheet">
     <title>My Team</title>
-</head>
-<div class="row days">
+
+<div style="height: 20vh; background-color: brown;">
+   <h1 style="text-align: center; padding-top: 7.5vh; color: white; font-family: 'Courier New', Courier, monospace; font-size: 40px;">Team Status</h1>
+</div>
+<main>
+<div class="row days justify-content-center">
     
   `;
   };  
