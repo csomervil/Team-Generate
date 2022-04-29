@@ -85,10 +85,10 @@ promptUser()
     <div class="card" style="width: 12rem; height: 12rem; margin: 10px">
     <div class="card-body">
     <h5 class="card-title">${portfolioData.status}</h5>
-    <div class="card-text">
+    <div class="card-text" style="font-size:15px">
     <div class="identification" id="i-temp2">id: ${portfolioData.id}</div>
     <div class="name" id="i-temp2">Name: ${portfolioData.name}</div>
-        <div class="email">Email: ${portfolioData.email}</div>
+        <div class="email">Email: <a href = "https://${portfolioData.email}" target="_blank">${portfolioData.email}</a></div>
         <div class="offn" id="i-feel2">${portfolioData.spec}</div>
     
     </div>
@@ -187,7 +187,7 @@ promptUser()
                 
         }; promptUserspec()
             .then(specData => {
-            portfolioData.spec = "GitHub: " + specData.spec;
+            portfolioData.spec = "GitHub: " + `<a href = "https://github.com/${specData.spec}" target="_blank">${specData.spec}</a>`;
             pageGen();
         });
     } 
