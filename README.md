@@ -16,3 +16,6 @@ https://github.com/csomervil/Team-Generate/blob/main/Demonstration_Video.mp4
 
 result of demonstration:
 https://github.com/csomervil/Team-Generate/blob/main/Team.html
+
+test demonstrations:
+https://github.com/csomervil/Team-Generate/blob/main/Tests_Demonstration.mp4
