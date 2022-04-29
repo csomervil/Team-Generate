@@ -88,7 +88,7 @@ promptUser()
     <div class="card-text" style="font-size:15px">
     <div class="identification" id="i-temp2">id: ${portfolioData.id}</div>
     <div class="name" id="i-temp2">Name: ${portfolioData.name}</div>
-        <div class="email">Email: <a href = "https://${portfolioData.email}" target="_blank">${portfolioData.email}</a></div>
+        <div class="email">Email: <a href = "mailto: ${portfolioData.email}" target="_blank">${portfolioData.email}</a></div>
         <div class="offn" id="i-feel2">${portfolioData.spec}</div>
     
     </div>
